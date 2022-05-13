@@ -1,0 +1,13 @@
+query StateList($id:ID!) {
+  country(code: $id) {
+	name
+	code
+	capital
+	languages {
+		native
+	}
+    states {
+		name
+    }
+  }
+}

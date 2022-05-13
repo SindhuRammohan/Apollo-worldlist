@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">World list</string>
+    <string name="continent">Continents</string>
+    <string name="no_state">No States for this country</string>
+</resources>

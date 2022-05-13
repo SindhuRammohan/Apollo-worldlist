@@ -1,0 +1,9 @@
+query CountryList($id:ID!) {
+  continent(code: $id) {
+  name
+    countries {
+      name
+	  code
+    }
+  }
+}
