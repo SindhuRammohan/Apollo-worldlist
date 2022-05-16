@@ -3,8 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
     <TextView
         android:id="@+id/emptyView"
         android:layout_width="@dimen/emptydp"
@@ -26,7 +24,83 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <TextView
+        android:id="@+id/emoji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/thirty_textsize_sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state_toolbar"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/state_header"
+        android:layout_width="@dimen/emptydp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emoji">
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="@dimen/fifty_dp"
+            android:layout_height="wrap_content"
+            android:text="@string/code"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:background="@android:color/black"/>
+        <TextView
+            android:id="@+id/native_language"
+            android:layout_width="@dimen/onetwenty_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:text="@string/native_language"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:background="@android:color/black"/>
+        <TextView
+            android:id="@+id/capital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:text="@string/capital"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/state_header_details"
+    android:layout_width="@dimen/emptydp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="@dimen/twenty_dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/state_header">
+    <TextView
+        android:id="@+id/code_details"
+        android:layout_width="@dimen/fifty_dp"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="2dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:background="@android:color/black"/>
+    <TextView
+        android:id="@+id/native_language_details"
+        android:layout_width="@dimen/onetwenty_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"/>
+    <View
+        android:layout_width="2dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:background="@android:color/black"/>
+    <TextView
+        android:id="@+id/capital_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/states"
         android:layout_width="@dimen/emptydp"
@@ -34,5 +108,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/state_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/state_header_details" />
 </androidx.constraintlayout.widget.ConstraintLayout>

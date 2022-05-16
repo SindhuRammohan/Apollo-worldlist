@@ -53,6 +53,16 @@ class StateListFragment   : Fragment() {
 
                 val newStates = response.data?.country?.states
                 binding.stateToolbar.title = response.data?.country?.name
+
+                binding.codeDetails.text = response.data?.country?.code
+
+                binding.nativeLanguageDetails.text = response.data?.country?.languages?.get(0)?.native
+
+                binding.capitalDetails.text = response.data?.country?.capital
+
+                binding.emoji.text = response.data?.country?.emoji
+
+
                 if (newStates != null) {
                     states.addAll(newStates)
                     adapter.notifyDataSetChanged()

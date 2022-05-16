@@ -3,6 +3,7 @@ query StateList($id:ID!) {
 	name
 	code
 	capital
+	emoji
 	languages {
 		native
 	}
